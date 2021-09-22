@@ -49,7 +49,7 @@ Cuando alguno de los comandos anteriores falle, arregla lo que sea necesario. Un
 make -C docs html
 ```
 
-Y tendrás el _site_ html con la documentación de esta estupenda calculadora ;)
+Y tendrás el _site_ html con la documentación de esta estupenda calculadora en `docs/build/html` ;)
 
 [darglint]: https://pypi.org/project/darglint/
 [flake8]: https://gitlab.com/pycqa/flake8
