@@ -19,5 +19,8 @@ def div(a: int, b: int) -> int:
     :param b: Another integer
 
     :return: the result of dividing a and b
+
+    :raises:
+        ZeroDivisionError: if parameter b is 0
     """
     return a / b
