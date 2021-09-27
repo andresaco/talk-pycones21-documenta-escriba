@@ -5,12 +5,13 @@ description = "Simplest calculator ever"
 authors = ["J. Andrés Pizarro"]
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = ">=3.6.1,<4.0"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.9.2"
 darglint = "^1.8.0"
 Sphinx = "^4.2.0"
+pre-commit = "^2.15.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

@@ -43,6 +43,22 @@ O si quieres validar los docstrings junto con las guidelines del [PEP8][pep8], u
 flake8 calc
 ```
 
+### ¿Cuando efectúo estos chequeos?
+
+Tienes muchas opciones para efectuar las comprobaciones anteriores sobre tu código, pero aqui te dejo un par de ideas:
+
+- En el ciclo de Integración continua, ejecuta el comando de arriba para verificarlo. O mucho mejor,
+- Usando la herramienta [pre-commit](https://pre-commit.com/) que ejecute el chequeo antes de comitear cambios en tu rama. Tienes una configuracion para pre-commit en este mismo repositorio.
+
+```sh
+> pre-commit install
+pre-commit installed at .git/hooks/pre-commit
+> git add -A
+> git commit -m "Testing my changes"
+```
+
+
+
 Cuando alguno de los comandos anteriores falle, arregla lo que sea necesario. Una vez este listo, genera la documentación con el siguiente comando:
 
 ```sh
