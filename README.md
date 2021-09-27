@@ -1,5 +1,11 @@
 # PyConEs 2021: Documenta sin ser un escriba
 
+- [PyConEs 2021: Documenta sin ser un escriba](#pycones-2021-documenta-sin-ser-un-escriba)
+  - [Setup](#setup)
+  - [Generando documentación consistente](#generando-documentación-consistente)
+    - [¿Cuando efectúo estos chequeos?](#cuando-efectúo-estos-chequeos)
+  - [Construyendo la documentación](#construyendo-la-documentación)
+
 Este repo contiene un pequeño ejemplo acerca de como mantener un API documentada siempre consistente con el código fuente.
 
 Para ello hace uso de las siguientes herramientas:
@@ -53,11 +59,22 @@ Tienes muchas opciones para efectuar las comprobaciones anteriores sobre tu cód
 ```sh
 > pre-commit install
 pre-commit installed at .git/hooks/pre-commit
-> git add -A
-> git commit -m "Testing my changes"
 ```
 
+Cuando los hooks esten instalados, al hacer commit o push verás algo como esto
 
+```sh
+> git commit -m "Added a new awesome change"
+[WARNING] Unstaged files detected.
+[INFO] Stashing unstaged files to /home/japizarro/.cache/pre-commit/patch1632760228-11911.
+Trim Trailing Whitespace.................................................Passed
+Fix End of Files.........................................................Passed
+Check Yaml...............................................................Passed
+Check for added large files..............................................Passed
+flake8...................................................................Passed
+```
+
+## Construyendo la documentación
 
 Cuando alguno de los comandos anteriores falle, arregla lo que sea necesario. Una vez este listo, genera la documentación con el siguiente comando:
 
