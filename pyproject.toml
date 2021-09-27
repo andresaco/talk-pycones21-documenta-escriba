@@ -12,6 +12,10 @@ flake8 = "^3.9.2"
 darglint = "^1.8.0"
 Sphinx = "^4.2.0"
 pre-commit = "^2.15.0"
+pytest = "^6.2.5"
+
+[tool.poetry.scripts]
+test = "pytest:console_main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

@@ -3,6 +3,8 @@
 - [PyConEs 2021: Documenta sin ser un escriba](#pycones-2021-documenta-sin-ser-un-escriba)
   - [Setup](#setup)
   - [Generando documentación consistente](#generando-documentación-consistente)
+    - [Chequeando docstrings](#chequeando-docstrings)
+      - [Doctest: Code snippets dentro de docstrings](#doctest-code-snippets-dentro-de-docstrings)
     - [¿Cuando efectúo estos chequeos?](#cuando-efectúo-estos-chequeos)
   - [Construyendo la documentación](#construyendo-la-documentación)
 
@@ -35,6 +37,8 @@ pip install darglint flake8 sphinx
 
 ## Generando documentación consistente
 
+### Chequeando docstrings
+
 El módulo `calc` contiene un submodulo dummy el cual implementa cuatro operaciones aritméticas: suma, resta, multiplicación y división. Pero aquí lo de menos es la funcionalidad, sino cómo la documentamos.
 
 Prueba a modificar los docstrings, los parámetros, lo que quieras. Liala parda. Y cuando quieras, ejecuta este comando:
@@ -48,6 +52,12 @@ O si quieres validar los docstrings junto con las guidelines del [PEP8][pep8], u
 ```sh
 flake8 calc
 ```
+
+#### Doctest: Code snippets dentro de docstrings
+
+Además de describir los parametros, excepciones, un resumen de lo que hace nuestro lógica de negocio, podemos incluir snippets de uso de nuestras funciones, y ejecutar dicho código como parte de nuestros tests!
+
+Si miras la implementación de las operaciones aritméticas super-avanzadas que se incluyen en este repositorio, verás que incluyen un ejemplo de uso de la función. A la hora de testear, puedes hacer uso de la opcion `--doctest-modules` de pytest para chequear esos snippets.
 
 ### ¿Cuando efectúo estos chequeos?
 
