@@ -37,6 +37,10 @@ extensions = [
     'sphinx.ext.doctest'
 ]
 
+doctest_global_setup = '''
+from calc import sum, sub, div, mul
+'''
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 

@@ -89,8 +89,10 @@ flake8...................................................................Passed
 Cuando alguno de los comandos anteriores falle, arregla lo que sea necesario. Una vez este listo, genera la documentación con el siguiente comando:
 
 ```sh
-make -C docs html
+make -C docs -b doctest html
 ```
+
+Observa el flag `-b doctest`. Esto hará que se chequeen los doctest incluidos en la documentación :D.
 
 Y tendrás el _site_ html con la documentación de esta estupenda calculadora en `docs/build/html` ;)
 
